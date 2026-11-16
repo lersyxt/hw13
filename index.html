@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Блочная модель CSS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Задание 1 и 2: Container и Border-Box</h2>
+    <div class="card">
+      Ширина этой карточки строго 300px, включая padding (20px) и border (5px).
+    </div>
+
+    <hr>
+
+    <h2>Задание 3: Margin Collapse</h2>
+    
+    <h3>Проблема (схлопывание отступов = 30px вместо 60px)</h3>
+    <div class="collapse-demo">
+      <div class="box box-top">Блок 1 (margin-bottom: 30px)</div>
+      <div class="box box-bottom">Блок 2 (margin-top: 30px)</div>
+    </div>
+
+    <h3>Решение 1: Flex-контейнер с gap (60px)</h3>
+    <div class="fix-flex">
+      <div class="box">Блок 1</div>
+      <div class="box">Блок 2</div>
+    </div>
+
+    <h3>Решение 2: Отступы в одном направлении (60px)</h3>
+    <div class="fix-single">
+      <div class="box box-single">Блок 1 (margin-bottom: 60px)</div>
+      <div class="box">Блок 2</div>
+    </div>
+  </div>
+
+</body>
+</html>
